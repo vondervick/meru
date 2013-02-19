@@ -1,0 +1,62 @@
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #58637C; /*#f5f5f5*/
+}
+
+.form-login {
+	max-width: 300px;
+	padding: 20px;
+	margin: 14% auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.form-login h1 {
+	margin: -20px -20px 18px -20px;
+	padding: 12px;
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+	border-bottom: 1px solid #cfcfcf;
+	border-radius: 3px 3px 0 0;
+	background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+}
+.form-login .app-descrip {
+	font-size: 14px;
+	color: #777777;
+	font-weight: normal;
+	display: block;
+	margin: 8px 6px 1px 6px;
+	float: right;
+}
+.form-login input[type="text"],
+.form-login input[type="password"] {
+	font-size: 18px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+.form-login .submit{
+	text-align:center;
+}
+.form-login-footer {
+  margin: 20px 0;
+  color: #ddd;
+  text-align: center;
+  font-weight: normal;
+  font-size: smaller;
+  text-shadow: none;
+}
+.align-center{
+	text-align: center;
+}
+

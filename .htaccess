@@ -1,0 +1,31 @@
+#---- Depreciado ---/
+#RewriteEngine on
+#RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|resources)
+#RewriteCond %{REQUEST_URI} !\.(css|js|gif|jpe?g|png|txt|xml)$
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+#---- --------------/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+	# Prohibe el acceso directo a 'assets' mediante url
+	Options -Indexes 
+    # Elimina el acceso a la carpeta del sistema por los usuarios.
+    # Además esto le permitirá crear un controlador de core.php,
+    # Antes esto no habría sido posible.
+    #"Core"  puede ser reemplazado si ha cambiado la carpeta del sistema.
+    RewriteCond %{REQUEST_URI} ^core.*
+    RewriteRule ^(.*)$ /sites/meru/index.php?/$1 [L]
+
+    # Comprueba si el usuario está intentando acceder a un archivo válido,
+    # como una imagen o un documento css, si esto no es cierto  envía la
+    # solicitud al index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /sites/meru/index.php?/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # Si no tenemos instalado el mod_rewrite, todos los 404
+    # Pueden ser enviados a index.php, y todo funciona con normalidad.
+    ErrorDocument 404 /index.php
+</IfModule>
